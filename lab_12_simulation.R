@@ -17,7 +17,7 @@ model_select = function(covariates, responses, cutoff){
   for (i in 1:sum(vec <= cutoff)) {
     vec2[i] = (new[[i]]$coefficients )[,4][2]
   }
-  return(vec2)
+  return(vec2 )
 }
 
 run_simulation = function(n_trials,n,p,cutoff){
