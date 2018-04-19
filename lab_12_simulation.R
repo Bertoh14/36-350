@@ -20,6 +20,10 @@ model_select = function(covariates, responses, cutoff){
   return(vec2 )
 }
 
+make_plot = function(datapath){
+  hist(datapath)
+}
+
 run_simulation = function(n_trials,n,p,cutoff){
   ret = c()
   for (i in 1:n_trials) {
@@ -27,5 +31,5 @@ run_simulation = function(n_trials,n,p,cutoff){
     mod = model_select(gen$covariates, gen$responses, cutoff)
     ret = c(ret,mod)
   }
-  hist(ret)
+  make_plot(ret)
 }
